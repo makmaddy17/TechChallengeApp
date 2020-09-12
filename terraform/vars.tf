@@ -23,3 +23,6 @@ variable "dockerfile_dir" {
   type = string
   description = "The directory that contains the Dockerfile"
 }
+
+variable "RDS_PASSWORD" {
+}
