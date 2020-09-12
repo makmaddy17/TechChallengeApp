@@ -12,3 +12,9 @@ variable "ECS_AMIS" {
     eu-west-1 = "ami-c8337dbb"
   }
 }
+
+variable "docker_image_tag" {
+  type        = string
+  description = "This is the tag which will be used for the image that you created"
+  default     = "latest"
+}
