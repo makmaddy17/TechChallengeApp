@@ -58,3 +58,8 @@ resource "aws_ecs_service" "myapp-service" {
     ignore_changes = [task_definition]
   }
 }
+
+provisioner "local-exec" {
+    command = "bash ${path.module}/scripts/build.sh ${var.dockerfile_dir} ${var.REPOSITORY_URL}:${var.docker_image_tag}"
+  }
+}
