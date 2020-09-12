@@ -49,10 +49,10 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
 }
 
 
-resource "aws_security_group" "allow-postgress" {
+resource "aws_security_group" "allow-postgres" {
   vpc_id      = aws_vpc.main.id
-  name        = "allow-postgress"
-  description = "allow-postgress"
+  name        = "allow-postgres"
+  description = "allow-postgres"
   ingress {
     from_port       = 5432
     to_port         = 5432
@@ -67,6 +67,6 @@ resource "aws_security_group" "allow-postgress" {
     self        = true
   }
   tags = {
-    Name = "allow-postgress"
+    Name = "allow-postgres"
   }
 }
